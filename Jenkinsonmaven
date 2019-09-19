@@ -8,5 +8,10 @@ node {
 	url: 'https://github.com/johnfinny/my-app-1'
    }
    
+   stage('Mvn Package'){
+	   // Build using maven
+     def mvnHome = tool name: 'Maven 3', type: 'maven' 
+	   sh "${mvnHome}/bin/mvn clean package "
+   }
    
 }
