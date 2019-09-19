@@ -10,7 +10,7 @@ node {
    
    stage('Mvn Package'){
 	   // Build using maven
-     def mvn = tool (name: 'maven3', type: 'maven') + '/bin/mvn'
+     def mvn = tool (name: 'Maven 3', type: 'maven') + '/root/apache-maven-3.6.2/bin/mvn'
 	   
 	   sh "${mvn} clean package "
    }
